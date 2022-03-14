@@ -34,7 +34,9 @@ namespace PR19
             car5.printInf(textBox4,path);
             car6.printInf(textBox4,path);
             Bus bus = new Bus("PAZ",4000,60,1995,90,32);
+            Bus bus1 = new Bus("ZIL",6000,75,1984,85,45);
             bus.printInf(textBox4,path);
+            bus1.printInf(textBox4,path);
             //string[,]infAboutCar = new string[2,5];
             /*car1.Deconstruct(out infAboutCar[0,0], out infAboutCar[0,1], out infAboutCar[0,2], out infAboutCar[0,3], out infAboutCar[0,4]);
             car2.Deconstruct(out infAboutCar[1, 0], out infAboutCar[1, 1], out infAboutCar[1, 2], out infAboutCar[1, 3], out infAboutCar[1, 4]);*/
