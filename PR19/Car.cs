@@ -10,12 +10,11 @@ namespace PR19
 {
     class Car
     {
-
-        private string marka = "";
-        private int V_dvig;
-        private int maxSpeed;
-        private int year;
-        private int powerfl;
+        public string marka = "";
+        public int V_dvig;
+        public int maxSpeed;
+        public int year;
+        public int powerfl;
         public Car(string marka, int V_dvig, int maxSpeed, int year, int powerfl)
         {
             this.marka = marka;
@@ -58,7 +57,56 @@ namespace PR19
         {          
             powerfl = pwrFl;
         }
+        public void Deconstruct(out string marka, out string V_dvig, out string maxSpeed, out string year, out string powerfl)
+        {
+            marka = this.marka;
+            V_dvig = Convert.ToString(this.V_dvig);
+            maxSpeed = Convert.ToString(this.maxSpeed);
+            year = Convert.ToString(this.year);
+            powerfl = Convert.ToString(this.powerfl);           
+        }
 
     }
-   
+    class Bus : Car
+    {
+        public int NumSeats;
+        public Bus(string marka, int V_dvig, int maxSpeed, int year, int powerfl, int numSeats) : base(marka, V_dvig, maxSpeed, year, powerfl)
+        {
+            NumSeats = numSeats;
+        }
+        public new void printInf(TextBox textBox, string path) 
+        {
+            try
+            {
+                textBox.Text += marka + " " + V_dvig + " " + maxSpeed + " " + year + " " + powerfl + " " + NumSeats +Environment.NewLine;
+                using (FileStream flt = File.Create(path))
+                {
+                    byte[] cars = new UTF8Encoding(true).GetBytes(textBox.Text);
+                    flt.Write(cars, 0, cars.Length);
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
+        public new void Setmarka(string newMark)
+        {
+            marka = newMark;
+        }
+        public new void SetV_dvig(int v_dvg)
+        {
+            V_dvig = v_dvg;
+        }
+        public new void SetSpecifications(int speed, int pwrFl)
+        {
+            maxSpeed = speed;
+            powerfl = pwrFl;
+        }
+        public new void SetSpecifications(int pwrFl)
+        {
+            powerfl = pwrFl;
+        }
+    }
 }

@@ -8,12 +8,10 @@ G:\ОАП\PR19\PR19\obj\Debug\PR19.csproj.GenerateResource.cache
 G:\ОАП\PR19\PR19\obj\Debug\PR19.csproj.CoreCompileInputs.cache
 G:\ОАП\PR19\PR19\obj\Debug\PR19.exe
 G:\ОАП\PR19\PR19\obj\Debug\PR19.pdb
-G:\ОАП\PR19\PR19\obj\Debug\PR19.desc.resources
 C:\Users\Professional\Desktop\PR19\PR19\bin\Debug\PR19.exe.config
 C:\Users\Professional\Desktop\PR19\PR19\bin\Debug\PR19.exe
 C:\Users\Professional\Desktop\PR19\PR19\bin\Debug\PR19.pdb
 C:\Users\Professional\Desktop\PR19\PR19\obj\Debug\PR19.csproj.AssemblyReference.cache
-C:\Users\Professional\Desktop\PR19\PR19\obj\Debug\PR19.desc.resources
 C:\Users\Professional\Desktop\PR19\PR19\obj\Debug\PR19.Form1.resources
 C:\Users\Professional\Desktop\PR19\PR19\obj\Debug\PR19.Properties.Resources.resources
 C:\Users\Professional\Desktop\PR19\PR19\obj\Debug\PR19.csproj.GenerateResource.cache
