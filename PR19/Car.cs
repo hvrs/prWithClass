@@ -10,6 +10,7 @@ namespace PR19
 {
     class Car
     {
+        public string path = @"G:\ОАП\PR19\text.txt";
         public string marka = "";
         public int V_dvig;
         public int maxSpeed;
@@ -23,7 +24,7 @@ namespace PR19
             this.year = year;
             this.powerfl = powerfl;
         }
-       public void printInf(TextBox textBox, string path) //Печать данных об автомобилях
+       public void printInf(TextBox textBox) //Печать данных об автомобилях
         {
             try
             {
@@ -40,6 +41,26 @@ namespace PR19
                 
             }
         }
+        public void printInf() //Печать данных об автомобилях
+        {
+            try
+            {
+                string todok = marka + " " + V_dvig + " " + maxSpeed + " " + year + " " + powerfl + Environment.NewLine;
+                using (FileStream flt = File.Create(path))
+                {
+                    byte[] cars = new UTF8Encoding(true).GetBytes(todok);
+                    flt.Write(cars, 0, cars.Length);
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
+
+
+
         public void Setmarka(string newMark)//Метод, изменяющий марку автомобиля
         {
             marka = newMark;
