@@ -29,12 +29,12 @@ namespace PR19
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tbMark = new System.Windows.Forms.TextBox();
+            this.tbVdvg = new System.Windows.Forms.TextBox();
+            this.tbSpeed = new System.Windows.Forms.TextBox();
+            this.tbYear = new System.Windows.Forms.TextBox();
+            this.tbPowerfl = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,50 +42,50 @@ namespace PR19
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbMark
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 20);
-            this.textBox1.TabIndex = 0;
+            this.tbMark.Location = new System.Drawing.Point(27, 38);
+            this.tbMark.Name = "tbMark";
+            this.tbMark.Size = new System.Drawing.Size(122, 20);
+            this.tbMark.TabIndex = 0;
             // 
-            // textBox2
+            // tbVdvg
             // 
-            this.textBox2.Location = new System.Drawing.Point(27, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 20);
-            this.textBox2.TabIndex = 1;
+            this.tbVdvg.Location = new System.Drawing.Point(27, 76);
+            this.tbVdvg.Name = "tbVdvg";
+            this.tbVdvg.Size = new System.Drawing.Size(122, 20);
+            this.tbVdvg.TabIndex = 1;
             // 
-            // textBox3
+            // tbSpeed
             // 
-            this.textBox3.Location = new System.Drawing.Point(27, 114);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(122, 20);
-            this.textBox3.TabIndex = 2;
+            this.tbSpeed.Location = new System.Drawing.Point(27, 114);
+            this.tbSpeed.Name = "tbSpeed";
+            this.tbSpeed.Size = new System.Drawing.Size(122, 20);
+            this.tbSpeed.TabIndex = 2;
             // 
-            // textBox4
+            // tbYear
             // 
-            this.textBox4.Location = new System.Drawing.Point(27, 149);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(122, 20);
-            this.textBox4.TabIndex = 3;
+            this.tbYear.Location = new System.Drawing.Point(27, 149);
+            this.tbYear.Name = "tbYear";
+            this.tbYear.Size = new System.Drawing.Size(122, 20);
+            this.tbYear.TabIndex = 3;
             // 
-            // textBox5
+            // tbPowerfl
             // 
-            this.textBox5.Location = new System.Drawing.Point(27, 184);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(122, 20);
-            this.textBox5.TabIndex = 4;
+            this.tbPowerfl.Location = new System.Drawing.Point(27, 184);
+            this.tbPowerfl.Name = "tbPowerfl";
+            this.tbPowerfl.Size = new System.Drawing.Size(122, 20);
+            this.tbPowerfl.TabIndex = 4;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(49, 220);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAdd.Location = new System.Drawing.Point(49, 220);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "Добавить";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label1
             // 
@@ -142,12 +142,12 @@ namespace PR19
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.tbPowerfl);
+            this.Controls.Add(this.tbYear);
+            this.Controls.Add(this.tbSpeed);
+            this.Controls.Add(this.tbVdvg);
+            this.Controls.Add(this.tbMark);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "addForm";
             this.Text = "addForm";
@@ -158,12 +158,12 @@ namespace PR19
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbMark;
+        private System.Windows.Forms.TextBox tbVdvg;
+        private System.Windows.Forms.TextBox tbSpeed;
+        private System.Windows.Forms.TextBox tbYear;
+        private System.Windows.Forms.TextBox tbPowerfl;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

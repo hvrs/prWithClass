@@ -29,47 +29,47 @@ namespace PR19
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCrt = new System.Windows.Forms.Button();
+            this.tbMain = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnCrt
             // 
-            this.button1.Location = new System.Drawing.Point(84, 280);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Создать";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCrt.Location = new System.Drawing.Point(84, 280);
+            this.btnCrt.Name = "btnCrt";
+            this.btnCrt.Size = new System.Drawing.Size(88, 34);
+            this.btnCrt.TabIndex = 1;
+            this.btnCrt.Text = "Создать";
+            this.btnCrt.UseVisualStyleBackColor = true;
+            this.btnCrt.Click += new System.EventHandler(this.btnCrt_Click);
             // 
-            // textBox4
+            // tbMain
             // 
-            this.textBox4.Location = new System.Drawing.Point(84, 12);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(432, 233);
-            this.textBox4.TabIndex = 4;
+            this.tbMain.Location = new System.Drawing.Point(84, 12);
+            this.tbMain.Multiline = true;
+            this.tbMain.Name = "tbMain";
+            this.tbMain.Size = new System.Drawing.Size(432, 233);
+            this.tbMain.TabIndex = 4;
             // 
-            // button3
+            // btnAdd
             // 
-            this.button3.Location = new System.Drawing.Point(200, 280);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 34);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Добавить";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnAdd.Location = new System.Drawing.Point(200, 280);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(88, 34);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "Добавить";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 359);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.tbMain);
+            this.Controls.Add(this.btnCrt);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -78,9 +78,9 @@ namespace PR19
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCrt;
+        private System.Windows.Forms.TextBox tbMain;
+        private System.Windows.Forms.Button btnAdd;
     }
 }
 

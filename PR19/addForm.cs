@@ -17,11 +17,11 @@ namespace PR19
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                Car addcar = new Car(textBox1.Text, int.Parse(textBox2.Text), int.Parse(textBox3.Text), int.Parse(textBox4.Text), int.Parse(textBox5.Text));
+                Car addcar = new Car(tbMark.Text, int.Parse(tbVdvg.Text), int.Parse(tbSpeed.Text), int.Parse(tbYear.Text), int.Parse(tbPowerfl.Text));
                 addcar.printInf();
             }
             catch (Exception)
