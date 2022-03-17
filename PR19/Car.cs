@@ -46,11 +46,7 @@ namespace PR19
             try
             {
                 string todok = marka + " " + V_dvig + " " + maxSpeed + " " + year + " " + powerfl + Environment.NewLine;
-                using (FileStream flt = File.Create(path))
-                {
-                    byte[] cars = new UTF8Encoding(true).GetBytes(todok);
-                    flt.Write(cars, 0, cars.Length);
-                }
+                File.AppendAllText(path,todok);
             }
             catch (Exception)
             {
@@ -95,7 +91,7 @@ namespace PR19
         {
             NumSeats = numSeats;
         }
-        public new void printInf(TextBox textBox, string path) 
+        public new void printInf(TextBox textBox) 
         {
             try
             {
