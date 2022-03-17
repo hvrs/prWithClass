@@ -46,9 +46,11 @@ namespace PR19
             // 
             // tbMain
             // 
-            this.tbMain.Location = new System.Drawing.Point(84, 12);
+            this.tbMain.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbMain.Location = new System.Drawing.Point(28, 12);
             this.tbMain.Multiline = true;
             this.tbMain.Name = "tbMain";
+            this.tbMain.ReadOnly = true;
             this.tbMain.Size = new System.Drawing.Size(432, 233);
             this.tbMain.TabIndex = 4;
             // 
