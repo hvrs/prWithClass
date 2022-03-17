@@ -148,6 +148,7 @@ namespace PR19
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "addForm";
             this.Text = "addForm";
             this.ResumeLayout(false);
