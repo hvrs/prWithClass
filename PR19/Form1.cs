@@ -80,18 +80,23 @@ namespace PR19
         private void btn_reload_Click(object sender, EventArgs e)
         {
             tbMain.Clear();
+            if (File.Exists(path2) == true)
+                tbMain.Lines = (File.ReadAllLines(path2));          
+            else
             tbMain.Lines = (File.ReadAllLines(patht));
+
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
             string markaAvtDel = tb_delete.Text;
             using (StreamReader sr = File.OpenText(patht))
-            {
+            { 
                 string[,] sp = new string[File.ReadAllLines(patht).Length, 5];
                 string[] strok = new string[File.ReadAllLines(patht).Length];
                 for (int i = 0; i < File.ReadAllLines(patht).Length; i++)
                 {
+                    File.Delete(patht);
                     strok = sr.ReadLine().Split();
                     for (int j = 0; j <= 4; j++)
                     {
@@ -108,7 +113,7 @@ namespace PR19
                         File.AppendAllText(path2, newtext);
                     }
                 }
-                
+                tbMain.Lines = (File.ReadAllLines(path2));
             }
         }
     }
