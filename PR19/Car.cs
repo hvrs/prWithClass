@@ -55,7 +55,7 @@ namespace PR19
             }
         }
 
-        public void Setmarka(string newMark)//Метод, изменяющий марку автомобиля
+        public virtual void Setmarka(string newMark)//Метод, изменяющий марку автомобиля
         {
             marka = newMark;
         }
@@ -106,7 +106,7 @@ namespace PR19
 
             }
         }
-        public new void Setmarka(string newMark)
+        public override void Setmarka(string newMark)
         {
             marka = newMark;
         }

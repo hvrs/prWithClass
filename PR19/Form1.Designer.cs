@@ -39,6 +39,7 @@ namespace PR19
             this.tb_delete = new System.Windows.Forms.TextBox();
             this.btn_delete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_sort = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCrt
@@ -120,7 +121,7 @@ namespace PR19
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(100, 21);
             this.btn_delete.TabIndex = 12;
-            this.btn_delete.Text = "Поиск";
+            this.btn_delete.Text = "Удалить";
             this.btn_delete.UseVisualStyleBackColor = true;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
@@ -133,11 +134,22 @@ namespace PR19
             this.label1.TabIndex = 13;
             this.label1.Text = "Марка";
             // 
+            // btn_sort
+            // 
+            this.btn_sort.Location = new System.Drawing.Point(420, 280);
+            this.btn_sort.Name = "btn_sort";
+            this.btn_sort.Size = new System.Drawing.Size(88, 34);
+            this.btn_sort.TabIndex = 14;
+            this.btn_sort.Text = "Сортировка";
+            this.btn_sort.UseVisualStyleBackColor = true;
+            this.btn_sort.Click += new System.EventHandler(this.btn_sort_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 359);
+            this.Controls.Add(this.btn_sort);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.tb_delete);
@@ -166,6 +178,7 @@ namespace PR19
         private System.Windows.Forms.TextBox tb_delete;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_sort;
     }
 }
 
