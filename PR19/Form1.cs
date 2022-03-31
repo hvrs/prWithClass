@@ -86,9 +86,6 @@ namespace PR19
             tbMain.Clear();
                 try
                 {
-                    if (File.Exists(path2) == true)
-                        tbMain.Lines = (File.ReadAllLines(path2));
-                    else
                         tbMain.Lines = (File.ReadAllLines(patht));
                 }
                 catch (Exception)
@@ -152,12 +149,12 @@ namespace PR19
         private void btn_sort_Click(object sender, EventArgs e)
         {
             
-                using (StreamReader sr = File.OpenText(path2))
+                using (StreamReader sr = File.OpenText(patht))
                 {
-                    string[,] sp = new string[File.ReadAllLines(path2).Length, 5];
-                    string[] strok = new string[File.ReadAllLines(path2).Length];
+                    string[,] sp = new string[File.ReadAllLines(patht).Length, 5];
+                    string[] strok = new string[File.ReadAllLines(patht).Length];
 
-                    for (int i = 0; i < File.ReadAllLines(path2).Length; i++)
+                    for (int i = 0; i < File.ReadAllLines(patht).Length; i++)
                     {
                         strok = sr.ReadLine().Split();
                         for (int j = 0; j <= 4; j++)
@@ -184,7 +181,7 @@ namespace PR19
                         }
                     }
                     tbMain.Clear();
-                    File.Delete(patht);
+                    //File.Delete(patht);
                     for (int i = 0; i < sp.GetLength(0); i++)
                     {
                             string newtext = sp[i, 0] + ' ' + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + Environment.NewLine;
