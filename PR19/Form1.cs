@@ -124,6 +124,29 @@ namespace PR19
                 }
                 tbMain.Lines = (File.ReadAllLines(path2));
             }
+            using (StreamReader sr = File.OpenText(path2))
+            {
+                File.Delete(patht);
+                string[,] sp = new string[File.ReadAllLines(path2).Length, 5];
+                string[] strok = new string[File.ReadAllLines(path2).Length];
+                for (int i = 0; i < File.ReadAllLines(path2).Length; i++)
+                {
+                    strok = sr.ReadLine().Split();
+                    for (int j = 0; j <= 4; j++)
+                    {
+                        sp[i, j] += strok[j]; //0Марка,1Объем, 2МаксСкор, 3Год, 4Мощность                        
+                    }
+                }
+                for (int i = 0; i < sp.GetLength(0); i++)
+                {
+                    
+                        string newtext = sp[i, 0] + ' ' + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + Environment.NewLine;
+                        File.AppendAllText(patht, newtext);
+                    
+                }
+                tbMain.Lines = (File.ReadAllLines(patht));
+            }
+            File.Delete(path2);
         }
 
         private void btn_sort_Click(object sender, EventArgs e)
