@@ -19,8 +19,8 @@ namespace PR19
         {
             InitializeComponent();
         }
-        public string patht = @"G:\ОАП\PR19\text.txt";
-        public string path2 = @"G:\ОАП\PR19\del.txt";
+        public string patht = @"C:\Users\Professional\source\repos\prWithClass\text.txt";
+        public string path2 = @"C:\Users\Professional\source\repos\prWithClass\del.txt";
         private void btnCrt_Click(object sender, EventArgs e)
         {
             tbMain.Clear();
@@ -83,6 +83,8 @@ namespace PR19
 
         private void btn_reload_Click(object sender, EventArgs e)
         {
+            tb_search.Clear();
+            tb_delete.Clear();
             tbMain.Clear();
                 try
                 {
@@ -185,11 +187,34 @@ namespace PR19
                     for (int i = 0; i < sp.GetLength(0); i++)
                     {
                             string newtext = sp[i, 0] + ' ' + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + Environment.NewLine;
-                            File.AppendAllText(patht, newtext);                      
+                            File.AppendAllText(path2, newtext);                      
                     }
-                    tbMain.Lines = (File.ReadAllLines(patht));
+                    tbMain.Lines = (File.ReadAllLines(path2));
                 }
+            using (StreamReader sr = File.OpenText(path2))
+            {
+                File.Delete(patht);
+                string[,] sp = new string[File.ReadAllLines(path2).Length, 5];
+                string[] strok = new string[File.ReadAllLines(path2).Length];
+                for (int i = 0; i < File.ReadAllLines(path2).Length; i++)
+                {
+                    strok = sr.ReadLine().Split();
+                    for (int j = 0; j <= 4; j++)
+                    {
+                        sp[i, j] += strok[j]; //0Марка,1Объем, 2МаксСкор, 3Год, 4Мощность                        
+                    }
+                }
+                for (int i = 0; i < sp.GetLength(0); i++)
+                {
+
+                    string newtext = sp[i, 0] + ' ' + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + Environment.NewLine;
+                    File.AppendAllText(patht, newtext);
+
+                }
+                tbMain.Lines = (File.ReadAllLines(patht));
             }
+            File.Delete(path2);
+        }
         }
        
     }
