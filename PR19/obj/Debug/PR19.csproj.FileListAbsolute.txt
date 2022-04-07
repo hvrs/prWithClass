@@ -30,3 +30,14 @@ C:\Users\Professional\Source\Repos\prWithClass\PR19\obj\Debug\PR19.csproj.Genera
 C:\Users\Professional\Source\Repos\prWithClass\PR19\obj\Debug\PR19.csproj.CoreCompileInputs.cache
 C:\Users\Professional\Source\Repos\prWithClass\PR19\obj\Debug\PR19.exe
 C:\Users\Professional\Source\Repos\prWithClass\PR19\obj\Debug\PR19.pdb
+G:\ОАП\PR199\PR19\bin\Debug\PR19.exe.config
+G:\ОАП\PR199\PR19\bin\Debug\PR19.exe
+G:\ОАП\PR199\PR19\bin\Debug\PR19.pdb
+G:\ОАП\PR199\PR19\obj\Debug\PR19.csproj.AssemblyReference.cache
+G:\ОАП\PR199\PR19\obj\Debug\PR19.addForm.resources
+G:\ОАП\PR199\PR19\obj\Debug\PR19.Form1.resources
+G:\ОАП\PR199\PR19\obj\Debug\PR19.Properties.Resources.resources
+G:\ОАП\PR199\PR19\obj\Debug\PR19.csproj.GenerateResource.cache
+G:\ОАП\PR199\PR19\obj\Debug\PR19.csproj.CoreCompileInputs.cache
+G:\ОАП\PR199\PR19\obj\Debug\PR19.exe
+G:\ОАП\PR199\PR19\obj\Debug\PR19.pdb

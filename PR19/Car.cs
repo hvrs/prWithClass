@@ -10,7 +10,7 @@ namespace PR19
 {
     class Car
     {
-        public string path = @"C:\Users\Professional\source\repos\prWithClass\text.txt";
+        public string path = @"G:\ОАП\PR199\text.txt";
         public string marka = "";
         public int V_dvig;
         public int maxSpeed;

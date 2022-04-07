@@ -40,6 +40,8 @@ namespace PR19
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.tb_seats = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbMark
@@ -79,7 +81,7 @@ namespace PR19
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(49, 220);
+            this.btnAdd.Location = new System.Drawing.Point(43, 259);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 5;
@@ -132,11 +134,29 @@ namespace PR19
             this.label5.TabIndex = 10;
             this.label5.Text = "Мощность";
             // 
+            // tb_seats
+            // 
+            this.tb_seats.Location = new System.Drawing.Point(27, 219);
+            this.tb_seats.Name = "tb_seats";
+            this.tb_seats.Size = new System.Drawing.Size(122, 20);
+            this.tb_seats.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(155, 226);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(149, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Количество мест(Автобусы)";
+            // 
             // addForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 255);
+            this.ClientSize = new System.Drawing.Size(318, 312);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tb_seats);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -169,5 +189,7 @@ namespace PR19
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tb_seats;
+        private System.Windows.Forms.Label label6;
     }
 }
