@@ -21,7 +21,7 @@ namespace PR19
         {
             try
             {
-                if (tb_seats.Text != string.Empty)
+                if (tb_seats.Text == string.Empty)
                 {
                   Car addcar = new Car(tbMark.Text, int.Parse(tbVdvg.Text), int.Parse(tbSpeed.Text), int.Parse(tbYear.Text), int.Parse(tbPowerfl.Text));
                   addcar.printInf();
@@ -29,7 +29,7 @@ namespace PR19
                 else
                 {
                     Bus addbus = new Bus(tbMark.Text, int.Parse(tbVdvg.Text), int.Parse(tbSpeed.Text), int.Parse(tbYear.Text), int.Parse(tbPowerfl.Text), int.Parse(tb_seats.Text));
-                    addbus.printInf();
+                    addbus.Print();
                 }
             }
             catch (Exception)

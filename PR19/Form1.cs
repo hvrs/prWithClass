@@ -59,14 +59,17 @@ namespace PR19
             string markaAvt = tb_search.Text;
             using (StreamReader sr = File.OpenText(patht))
             {
-                string[,] sp = new string[File.ReadAllLines(patht).Length, 5];
+                string[,] sp = new string[File.ReadAllLines(patht).Length, 6];
                 string[] strok = new string[File.ReadAllLines(patht).Length];
                 for (int i = 0; i < File.ReadAllLines(patht).Length; i++)
                 {
                     strok = sr.ReadLine().Split();
-                    for (int j = 0; j <= 4; j++)
+                    for (int j = 0; j <= 5; j++)
                     {
-                        sp[i, j] += strok[j]; //0Марка,1Объем, 2МаксСкор, 3Год, 4Мощность                        
+                        if (j == 5 && strok.Length == 5)
+                            sp[i, j] = " ";
+                        else
+                            sp[i, j] = strok[j];
                     }
                 }
                 tbMain.Clear();
@@ -74,7 +77,7 @@ namespace PR19
                 {
                     if (sp[i,0] == markaAvt)
                     {
-                        tbMain.Text += sp[i, 0] + ' '  + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + Environment.NewLine;
+                        tbMain.Text += sp[i, 0] + ' '  + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + ' ' + sp[i, 5] + Environment.NewLine;
                     }
                 }
             }
@@ -87,7 +90,7 @@ namespace PR19
             tbMain.Clear();
                 try
                 {
-                        tbMain.Lines = (File.ReadAllLines(patht));
+                tbMain.Lines = (File.ReadAllLines(patht));
                 }
                 catch (Exception)
                 {
@@ -100,15 +103,19 @@ namespace PR19
             string markaAvtDel = tb_delete.Text;
             using (StreamReader sr = File.OpenText(patht))
             {
-                File.Delete(path2);
-                string[,] sp = new string[File.ReadAllLines(patht).Length, 5];
+                File.Delete(path2);;
+                string[,] sp = new string[File.ReadAllLines(patht).Length, 6];
                 string[] strok = new string[File.ReadAllLines(patht).Length];
                 for (int i = 0; i < File.ReadAllLines(patht).Length; i++)
                 {
                     strok = sr.ReadLine().Split();
-                    for (int j = 0; j <= 4; j++)
+                    for (int j = 0; j <= 5; j++)
                     {
-                        sp[i, j] += strok[j]; //0Марка,1Объем, 2МаксСкор, 3Год, 4Мощность, 5количество мест(для автобусов)                       
+                        if (j == 5 && strok.Length == 5)
+                            sp[i, j] = " ";
+                        else
+                            sp[i, j] = strok[j];
+                        //0Марка,1Объем, 2МаксСкор, 3Год, 4Мощность, 5количество мест(для автобусов)                       
                     }
                 }
                 tbMain.Clear();
@@ -116,7 +123,7 @@ namespace PR19
                 {
                     if (sp[i,0] != markaAvtDel)
                     {
-                        string newtext = sp[i, 0] + ' ' + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + Environment.NewLine;
+                        string newtext = sp[i, 0] + ' ' + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + ' ' + sp[i, 5] + Environment.NewLine;
                         File.AppendAllText(path2, newtext);
                     }
                 }
@@ -125,20 +132,23 @@ namespace PR19
             using (StreamReader sr = File.OpenText(path2))
             {
                 File.Delete(patht);
-                string[,] sp = new string[File.ReadAllLines(path2).Length, 5];
+                string[,] sp = new string[File.ReadAllLines(path2).Length, 6];
                 string[] strok = new string[File.ReadAllLines(path2).Length];
                 for (int i = 0; i < File.ReadAllLines(path2).Length; i++)
                 {
                     strok = sr.ReadLine().Split();
-                    for (int j = 0; j <= 4; j++)
+                    for (int j = 0; j <= 5; j++)
                     {
-                        sp[i, j] += strok[j]; //0Марка,1Объем, 2МаксСкор, 3Год, 4Мощность                        
+                        if (j == 5 && strok.Length == 5)
+                            sp[i, j] = " ";
+                        else
+                            sp[i, j] = strok[j];
                     }
                 }
                 for (int i = 0; i < sp.GetLength(0); i++)
                 {
                     
-                        string newtext = sp[i, 0] + ' ' + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + Environment.NewLine;
+                        string newtext = sp[i, 0] + ' ' + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + ' ' + sp[i, 5] + Environment.NewLine;
                         File.AppendAllText(patht, newtext);
                     
                 }
@@ -153,26 +163,29 @@ namespace PR19
             {
                 using (StreamReader sr = File.OpenText(patht))
                 {
-                    string[,] sp = new string[File.ReadAllLines(patht).Length, 5];
+                    string[,] sp = new string[File.ReadAllLines(patht).Length, 6];
                     string[] strok = new string[File.ReadAllLines(patht).Length];
 
                     for (int i = 0; i < File.ReadAllLines(patht).Length; i++)
                     {
                         strok = sr.ReadLine().Split();
-                        for (int j = 0; j <= 4; j++)
+                        for (int j = 0; j <= 5; j++)
                         {
-                            sp[i, j] += strok[j]; //0Марка,1Объем, 2МаксСкор, 3Год, 4Мощность                        
+                            if (j == 5 && strok.Length == 5)
+                                sp[i, j] = " ";
+                            else
+                                sp[i, j] = strok[j];
                         }
                     }
-                    string[] tlh = new string[5];
-                    string[] tlh1 = new string[5];
+                    string[] tlh = new string[6];
+                    string[] tlh1 = new string[6];
                     for (int i = 0; i < sp.GetLength(0); i++)
                     {
                         for (int j = i + 1; j < sp.GetLength(0); j++)
                         {
                             if (int.Parse(sp[i, 3]) > int.Parse(sp[j, 3]))
                             {
-                                for (int k = 0; k < 5; k++)
+                                for (int k = 0; k < 6; k++)
                                 {
                                     tlh[k] = sp[i, k];
                                     tlh1[k] = sp[j, k];
@@ -185,7 +198,7 @@ namespace PR19
                     tbMain.Clear();
                     for (int i = 0; i < sp.GetLength(0); i++)
                     {
-                        string newtext = sp[i, 0] + ' ' + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + Environment.NewLine;
+                        string newtext = sp[i, 0] + ' ' + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + ' ' + sp[i, 5] + Environment.NewLine;
                         File.AppendAllText(path2, newtext);
                     }
                     tbMain.Lines = (File.ReadAllLines(path2));
@@ -193,20 +206,23 @@ namespace PR19
                 using (StreamReader sr = File.OpenText(path2))
                 {
                     File.Delete(patht);
-                    string[,] sp = new string[File.ReadAllLines(path2).Length, 5];
+                    string[,] sp = new string[File.ReadAllLines(path2).Length, 6];
                     string[] strok = new string[File.ReadAllLines(path2).Length];
                     for (int i = 0; i < File.ReadAllLines(path2).Length; i++)
                     {
                         strok = sr.ReadLine().Split();
-                        for (int j = 0; j <= 4; j++)
+                        for (int j = 0; j <= 5; j++)
                         {
-                            sp[i, j] += strok[j]; //0Марка,1Объем, 2МаксСкор, 3Год, 4Мощность                        
+                            if (j == 5 && strok.Length == 5)
+                                sp[i, j] = " ";
+                            else
+                                sp[i, j] = strok[j];
                         }
                     }
                     for (int i = 0; i < sp.GetLength(0); i++)
                     {
 
-                        string newtext = sp[i, 0] + ' ' + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + Environment.NewLine;
+                        string newtext = sp[i, 0] + ' ' + sp[i, 1] + ' ' + sp[i, 2] + ' ' + sp[i, 3] + ' ' + sp[i, 4] + ' ' + sp[i, 5] + Environment.NewLine;
                         File.AppendAllText(patht, newtext);
 
                     }

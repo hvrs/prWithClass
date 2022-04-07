@@ -102,8 +102,17 @@ namespace PR19
             }
             catch (Exception)
             {
-
-
+            }
+        }
+        public void Print()
+        {
+            try
+            {
+                string todok = marka + " " + V_dvig + " " + maxSpeed + " " + year + " " + powerfl + " " + NumSeats + Environment.NewLine;
+                File.AppendAllText(path, todok);
+            }
+            catch (Exception)
+            {
             }
         }
         public override void Setmarka(string newMark)
